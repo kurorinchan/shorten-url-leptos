@@ -62,8 +62,11 @@ fn App() -> impl IntoView {
 
     view! {
         <div class="container">
+            <h1>"Amazon URL shortener"</h1>
+            <div>"Shortens Amazon URLs by removing unnecessary parts of the URL."</div>
+            <hr/>
             <form on:submit=on_submit>
-                <label for="url">Enter URL:</label>
+                <label for="url">"Enter URL:"</label>
                 <input id="url" type="text" value=url node_ref=input_element/>
                 <button type="submit">Submit</button>
             </form>
