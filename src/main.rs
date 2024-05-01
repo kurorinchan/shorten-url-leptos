@@ -4,12 +4,7 @@ use url::Url;
 #[component]
 fn App() -> impl IntoView {
     let (url, set_url) = create_signal(String::new());
-
-    // TODO: This is a default value for testeing. Remove this.
-    set_url.set("https://www.amazon.co.jp/dp/B00Q9WFLHU?th=1".to_string());
-
     let (processed_url, processed_url_set) = create_signal(String::new());
-
     let (status, set_status) = create_signal(String::new());
 
     let input_element: NodeRef<html::Input> = create_node_ref();
