@@ -62,7 +62,7 @@ fn App() -> impl IntoView {
             <hr/>
             <form on:submit=on_submit>
                 <label for="url">"Enter URL:"</label>
-                <input id="url" type="text" value=url node_ref=input_element/>
+                <input id="url" type="text" autofocus value=url node_ref=input_element/>
                 <button type="submit">Submit</button>
             </form>
 
