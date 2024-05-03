@@ -64,6 +64,16 @@ fn App() -> impl IntoView {
                 <label for="url">"Enter URL:"</label>
                 <input id="url" type="text" autofocus value=url node_ref=input_element/>
                 <button type="submit">Submit</button>
+                <button
+                    type="reset"
+                    on:click=move |_| {
+                        set_url.set(String::new());
+                        input_element.get().unwrap().focus().unwrap();
+                    }
+                >
+
+                    "Reset"
+                </button>
             </form>
 
             <div>"Status: " {move || status.get()}</div>
